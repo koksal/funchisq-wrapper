@@ -7,7 +7,7 @@ import org.scalatest.FunSuite
 
 class TimeSeriesParserTest extends FunSuite {
 
-  test("Time series without missing data should be correctly parsed.") {
+  test("Time series without missing data should be correctly parsed") {
     val url = getClass.getResource("/timeseries.tsv")
     val file = new File(url.getFile())
     val ts = TimeSeriesParser.parse(file)
