@@ -1,11 +1,18 @@
 package funchisqwrapper
 
+import java.io.File
+
+import funchisqwrapper.parsing.TimeSeriesParser
 import org.ddahl.rscala.RClient
 
 object Main {
   def main(args: Array[String]): Unit = {
     // read each profile
+    val inputFile = new File(args(0))
+    val continuousTimeSeries = TimeSeriesParser.parse(inputFile)
+
     // discretize each profile using ckmeans (also returns # levels)
+    val discreteTimeSeries =
 
     // for every pair of profiles
     //   create contingency table from pairs
