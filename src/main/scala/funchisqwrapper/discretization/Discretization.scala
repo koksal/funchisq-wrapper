@@ -6,7 +6,8 @@ object Discretization {
   def discretize(timeSeries: ContinuousTimeSeries): DiscreteTimeSeries = {
     val discreteProfiles = timeSeries.profiles map { p =>
       val discreteValues = CkmeansInterface.ckmeans(p.values)
-      DiscreteProfile(p.id, discreteValues, 1)
+      val nbLevels = discreteValues.max - discreteValues.min + 1
+      DiscreteProfile(p.id, discreteValues, nbLevels)
     }
 
     DiscreteTimeSeries(discreteProfiles)
