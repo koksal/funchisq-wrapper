@@ -16,7 +16,7 @@ class DiscretizationTest extends FunSuite {
 
     assertResult(expected)(Discretization.discretize(ts))
   }
-  
+
   test("Single profile with two values should be discretized") {
     val ts = ContinuousTimeSeries(Seq(
       ContinuousProfile("A", List(1.0, 2.0))
