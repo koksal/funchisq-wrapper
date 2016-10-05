@@ -2,6 +2,7 @@ package funchisqwrapper
 
 import java.io.File
 
+import funchisqwrapper.discretization.Discretization
 import funchisqwrapper.parsing.TimeSeriesParser
 import org.ddahl.rscala.RClient
 
@@ -12,7 +13,7 @@ object Main {
     val continuousTimeSeries = TimeSeriesParser.parse(inputFile)
 
     // discretize each profile using ckmeans (also returns # levels)
-    val discreteTimeSeries =
+    val discreteTimeSeries = Discretization.discretize(continuousTimeSeries)
 
     // for every pair of profiles
     //   create contingency table from pairs
