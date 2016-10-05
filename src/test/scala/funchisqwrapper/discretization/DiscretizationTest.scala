@@ -1,6 +1,9 @@
 package funchisqwrapper.discretization
 
-import funchisqwrapper.TimeSeriesTypes.{ContinuousProfile, ContinuousTimeSeries, DiscreteProfile, DiscreteTimeSeries}
+import funchisqwrapper.TimeSeriesTypes.ContinuousProfile
+import funchisqwrapper.TimeSeriesTypes.ContinuousTimeSeries
+import funchisqwrapper.TimeSeriesTypes.DiscreteProfile
+import funchisqwrapper.TimeSeriesTypes.DiscreteTimeSeries
 import org.scalatest.FunSuite
 
 class DiscretizationTest extends FunSuite {

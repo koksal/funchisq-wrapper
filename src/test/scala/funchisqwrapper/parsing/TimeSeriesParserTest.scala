@@ -2,7 +2,8 @@ package funchisqwrapper.parsing
 
 import java.io.File
 
-import funchisqwrapper.TimeSeriesTypes.{ContinuousProfile, ContinuousTimeSeries}
+import funchisqwrapper.TimeSeriesTypes.ContinuousProfile
+import funchisqwrapper.TimeSeriesTypes.ContinuousTimeSeries
 import org.scalatest.FunSuite
 
 class TimeSeriesParserTest extends FunSuite {
