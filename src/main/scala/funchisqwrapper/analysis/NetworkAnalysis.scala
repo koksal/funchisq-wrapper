@@ -14,7 +14,8 @@ object NetworkAnalysis {
       p2 <- profiles
       if p1.id != p2.id
     } yield {
-      // TODO make contingency table from profiles, call funchisq
+      println(s"${p1.id} -> ${p2.id}")
+
       val contingencyTable = ContingencyTable.fromProfiles(p1, p2)
       val score = FunChisqInterface.funChisq(contingencyTable)
 
